@@ -1,0 +1,18 @@
+version: '2.4'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+    shm_size: '30gb'
+    environment:
+      - STORE_URL
+      - http_proxy
+      - https_proxy
+    volumes:
+      - ./:/srv
+      - ./.cache:/root/.cache
+    runtime: nvidia
