@@ -6,6 +6,7 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+object-detection = {path = "object-detection"}
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
